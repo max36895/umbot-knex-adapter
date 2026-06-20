@@ -40,16 +40,19 @@
     "scripts": {
         "build": "tsc",
         "test": "jest",
+        "bt": "npm run build && npm run test",
+        "test:coverage": "jest --coverage",
         "typecheck": "tsc --noEmit",
-        "prepublishOnly": "npm run build"
+        "lint": "eslint . --ext .ts",
+        "prettier": "prettier --write .",
+        "deploy": "npm run build && npm publish"
     },
     "engines": {
         "node": ">=20.0.0"
     },
     "files": [
         "dist",
-        "README.md",
-        "LICENSE"
+        "README.md"
     ],
     "peerDependencies": {
         "knex": "^3.1.0",
@@ -64,6 +67,27 @@
         "knex": "^3.1.0",
         "ts-jest": "^29.4.9",
         "typescript": "^5.9.3",
-        "umbot": "^3.0.0"
-    }
+        "umbot": "^3.0.0",
+        "@eslint/js": "^10.0.1",
+        "@typescript-eslint/eslint-plugin": "^8.58.0",
+        "@typescript-eslint/parser": "^8.58.0",
+        "eslint": "^10.2.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-security": "^4.0.0",
+        "globals": "^17.4.0",
+        "prettier": "^3.8.1",
+        "typedoc": "^0.28.18",
+        "typescript-eslint": "^8.60.0"
+    },
+    "funding": {
+        "type": "individual",
+        "url": "https://boosty.to/max36895/donate"
+    },
+    "maintainers": [
+        {
+            "name": "max36895",
+            "email": "maximco36895@yandex.ru",
+            "url": "https://github.com/max36895"
+        }
+    ]
 }

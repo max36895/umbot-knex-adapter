@@ -1,0 +1,9 @@
+.idea/*
+/logs/*
+/json/*
+/dist/*
+/docs/*
+/node_modules/*
+/reps/*
+/coverage/*
+/package-lock.json

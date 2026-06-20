@@ -52,10 +52,10 @@ const dbAdapter = new KnexAdapter({
     user: 'postgres',
     pass: 'super_secret_password',
     options: {
-        client: 'pg',       // 'pg', 'mysql2', 'better-sqlite3', etc.
+        client: 'pg', // 'pg', 'mysql2', 'better-sqlite3', etc.
         port: 5432,
         pool: { min: 2, max: 10 },
-        debug: false        // Set to true to log all SQL queries
+        debug: false, // Set to true to log all SQL queries
     },
 });
 
@@ -68,7 +68,7 @@ bot.use(dbAdapter);
 The options object in the adapter config accepts standard Knex parameters:
 
 | Parameter  | Type    | Default | Description                                                  |
-|------------|---------|---------|--------------------------------------------------------------|
+| ---------- | ------- | ------- | ------------------------------------------------------------ |
 | client     | string  | 'pg'    | The database driver (pg, mysql2, better-sqlite3, mssql).     |
 | port       | number  | Auto    | Database port. Auto-detected based on the client if omitted. |
 | pool.min   | number  | 2       | Minimum number of connections in the pool.                   |
@@ -85,7 +85,7 @@ import { Bot, AppContext } from 'umbot';
 import { KnexAdapter } from 'umbot/knex';
 
 const bot = new Bot();
-bot.use(new KnexAdapter())
+bot.use(new KnexAdapter());
 ```
 
 ## 🧪 Development & Testing
@@ -101,8 +101,12 @@ npm test
 ```
 
 ## 🔗 Ecosystem
+
 This package is part of the umbot ecosystem:
- - [umbot](https://github.com/max36895/universal_bot-ts?spm=a2ty_o01.29997173.0.0.6c1355fbK2ee1j) - The core universal bot framework (Telegram, VK, web, etc.).
- - umbot-knex-adapter - SQL Database adapter (this package).
+
+- [umbot](https://github.com/max36895/universal_bot-ts) - The core universal bot framework (Telegram, VK, web, etc.).
+- umbot-knex-adapter - SQL Database adapter (this package).
+
 ## 📄 License
+
 MIT © Maxim-M

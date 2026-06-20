@@ -84,7 +84,7 @@ describe('KnexAdapter', () => {
             );
             expect(result.status).toBe(true);
             expect(result.data).toHaveLength(1);
-            expect((result.data as any[])[0].name).toBe('John');
+            expect((result.data as Record<string, unknown>[])[0].name).toBe('John');
         });
 
         it('_update должен обновить запись по primaryKeyName', async () => {
@@ -109,7 +109,7 @@ describe('KnexAdapter', () => {
                 { id: 1 },
                 true,
             );
-            expect((selectRes.data as any[])[0].name).toBe('Jane');
+            expect((selectRes.data as Record<string, unknown>[])[0].name).toBe('Jane');
         });
 
         it('_remove должен удалить запись', async () => {
@@ -150,7 +150,7 @@ describe('KnexAdapter', () => {
             };
             const element = { name: "O'Connor LongName" };
             const result = adapter.validate(query, element);
-            expect(result.name).toBe("O''...");
+            expect(result.name).toBe("O'...");
         });
     });
 });

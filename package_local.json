@@ -1,0 +1,54 @@
+{
+    "name": "umbot-knex-adapter",
+    "version": "1.0.0",
+    "description": "Knex.js database adapter for umbot framework",
+    "keywords": [
+        "umbot",
+        "knex",
+        "database",
+        "adapter",
+        "postgresql",
+        "mysql",
+        "sqlite",
+        "bot"
+    ],
+    "author": {
+        "name": "Maxim-M",
+        "email": "maximco36895@yandex.ru"
+    },
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "commonjs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/max36895/universal_bot-ts.git",
+        "directory": "reps/umbot-knex-adapter"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "typecheck": "tsc --noEmit"
+    },
+    "engines": {
+        "node": ">=20.19.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "peerDependencies": {
+        "knex": "^3.1.0",
+        "umbot": ">=3.0.0"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^20.19.30",
+        "better-sqlite3": "^11.10.0",
+        "jest": "^30.3.0",
+        "knex": "^3.1.0",
+        "ts-jest": "^29.4.9",
+        "typescript": "^5.9.3",
+        "umbot": "file:../.."
+    }
+}

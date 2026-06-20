@@ -1,0 +1,69 @@
+{
+    "name": "umbot-knex-adapter",
+    "version": "1.0.0",
+    "description": "A robust Knex.js database adapter for the umbot TypeScript framework. Supports PostgreSQL, MySQL, SQLite, and MSSQL for building scalable Telegram and web bots.",
+    "keywords": [
+        "umbot",
+        "universal-bot",
+        "knex",
+        "knexjs",
+        "database",
+        "db-adapter",
+        "postgresql",
+        "postgres",
+        "mysql",
+        "sqlite",
+        "mssql",
+        "sql",
+        "orm",
+        "telegram-bot",
+        "typescript",
+        "bot-framework"
+    ],
+    "author": {
+        "name": "Maxim-M",
+        "email": "maximco36895@yandex.ru",
+        "url": "https://github.com/max36895"
+    },
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "commonjs",
+    "homepage": "https://github.com/max36895/umbot-knex-adapter#readme",
+    "bugs": {
+        "url": "https://github.com/max36895/umbot-knex-adapter/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/max36895/umbot-knex-adapter.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "typecheck": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "engines": {
+        "node": ">=20.0.0"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "peerDependencies": {
+        "knex": "^3.1.0",
+        "umbot": ">=3.0.0"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^20.19.30",
+        "better-sqlite3": "^11.10.0",
+        "jest": "^30.3.0",
+        "knex": "^3.1.0",
+        "ts-jest": "^29.4.9",
+        "typescript": "^5.9.3",
+        "umbot": "^3.0.0"
+    }
+}

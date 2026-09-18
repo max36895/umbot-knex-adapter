@@ -1,0 +1,14 @@
+.idea/*
+/logs/*
+/json/*
+/dist/*
+/docs/*
+/node_modules/*
+/reps/*
+/coverage/*
+/package-lock.json
+
+# Файлы БД, создаваемые при локальных прогонах
+*.sqlite
+*.sqlite3
+/testdb

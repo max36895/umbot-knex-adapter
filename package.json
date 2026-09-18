@@ -1,6 +1,6 @@
 {
     "name": "umbot-knex-adapter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A robust Knex.js database adapter for the umbot TypeScript framework. Supports PostgreSQL, MySQL, SQLite, and MSSQL for building scalable Telegram and web bots.",
     "keywords": [
         "umbot",
@@ -40,30 +40,46 @@
     "scripts": {
         "build": "tsc",
         "test": "jest",
+        "test:coverage": "jest --coverage",
+        "bt": "npm run build && npm run test",
         "typecheck": "tsc --noEmit",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prettier": "prettier --write .",
+        "prettier:check": "prettier --check .",
+        "check": "npm run prettier:check && npm run typecheck && npm run lint",
         "prepublishOnly": "npm run build"
     },
     "engines": {
-        "node": ">=20.0.0"
+        "node": ">=20.19.0"
     },
     "files": [
         "dist",
         "README.md",
-        "LICENSE"
+        "LICENSE.md"
     ],
     "peerDependencies": {
         "knex": "^3.1.0",
-        "umbot": ">=3.0.0"
+        "umbot": "^3.1.0"
     },
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@types/better-sqlite3": "^7.6.13",
         "@types/jest": "^30.0.0",
         "@types/node": "^20.19.30",
+        "@typescript-eslint/eslint-plugin": "^8.58.0",
+        "@typescript-eslint/parser": "^8.58.0",
         "better-sqlite3": "^11.10.0",
+        "eslint": "^10.2.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-security": "^4.0.0",
+        "globals": "^17.4.0",
         "jest": "^30.3.0",
         "knex": "^3.1.0",
+        "prettier": "^3.8.1",
         "ts-jest": "^29.4.9",
         "typescript": "^5.9.3",
-        "umbot": "^3.0.0"
+        "typescript-eslint": "^8.60.0",
+        "umbot": "^3.1.2"
     }
 }

@@ -81,5 +81,16 @@
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.60.0",
         "umbot": "^3.1.2"
-    }
+    },
+    "funding": {
+      "type": "individual",
+      "url": "https://boosty.to/max36895/donate"
+    },
+    "maintainers": [
+      {
+        "name": "max36895",
+        "email": "maximco36895@yandex.ru",
+        "url": "https://github.com/max36895"
+      }
+    ]
 }
